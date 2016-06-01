@@ -26,16 +26,16 @@ $(document).ready(function() {
 			$('.ryu-throwing').hide();
 			$('.ryu-ready').show();
 		})
-		.keydown(function(e) {
-			if (e.keyCode == 88) {}
+		$(document).keydown(function(event) {
+			if (event.keyCode == 88) {}
 			playInthefade();
 			$('.ryu-still').hide();
 			$('.ryu-ready').hide();
 			$('.ryu-throwing').hide();
 			$('.ryu-cool').show();
 		})
-		.keyup(function(e) {
-   	 		if (e.keyCode == 88) {
+		.keyup(function(event) {
+   	 		if (event.keyCode == 88) {
    		   	$('#cool-inthefade')[0].pause();
       		$('#cool-inthefade')[0].load();
       		$('.ryu-cool').hide();
